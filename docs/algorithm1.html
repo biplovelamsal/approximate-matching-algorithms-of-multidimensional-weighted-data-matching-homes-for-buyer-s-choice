@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algorithm 1 - Weighted k-NN</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 850px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2, h3 { color: #2c3e50; }
+    a { color: #2980b9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 1.5rem; }
+    code { background-color: #f4f4f4; padding: 0.2rem 0.4rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Algorithm 1: Weighted k-Nearest Neighbors (k-NN)</h1>
+  <p>This page summarizes the implementation of Algorithm 1 for approximate matching of multidimensional weighted data.</p>
+
+  <h2>Overview</h2>
+  <p>The Weighted k-NN algorithm ranks and returns the top <code>k</code> matches to a user's ideal preference by computing the weighted Euclidean distance between candidate items (e.g., homes) and the user's preference vector.</p>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Written in C with optimized data structures</li>
+    <li>Measures run-time performance for different input sizes</li>
+    <li>Matches 3-attribute candidate homes against weighted user preferences</li>
+  </ul>
+
+  <h2>How to Run</h2>
+  <pre><code>cd algo1_weighted_knn/src
+gcc -o weighted_knn weighted_knn.c -lm
+./weighted_knn</code></pre>
+
+  <h2>Runtime Results</h2>
+  <table border="1" cellpadding="6">
+    <tr><th>Input Size</th><th>Time (seconds)</th></tr>
+    <tr><td>100</td><td>0.000051</td></tr>
+    <tr><td>500</td><td>0.000130</td></tr>
+    <tr><td>1000</td><td>0.000255</td></tr>
+    <tr><td>5000</td><td>0.001179</td></tr>
+    <tr><td>10000</td><td>0.001985</td></tr>
+  </table>
+
+  <h2>Report</h2>
+  <p><a href="../algo1_weighted_knn/report/knn_report.pdf" target="_blank">Download Report (PDF)</a></p>
+
+  <h2>LLM Usage</h2>
+  <p>LLM assistance (ChatGPT) was used to plan, structure, and optimize the algorithm, generate documentation, and assist with performance testing. Final code was reviewed manually.</p>
+
+  <p><a href="index.html">&larr; Back to Home</a></p>
+</body>
+</html>
